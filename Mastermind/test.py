@@ -1,31 +1,44 @@
-def mastermind_PC_code(): #Hier moet de speler de code van de comuter raden
 
-    import random
-    kleuren_lijst = ['Rood', 'Oranje', 'Geel', 'Groen', 'Blauw', 'Paars']
-    secret_key = []
-    for kleur in range(4): #Hier word een random code gegenereerd
-        kleur = random.choice(kleuren_lijst)
-        secret_key.append(kleur)
-    print(secret_key)
+import random
+kleuren_lijst = ['rood', 'oranje', 'geel', 'groen', 'blauw', 'paars']
+secret_key = []
+for kleur in range(4):
+    kleur = random.choice(kleuren_lijst)
+    secret_key.append(kleur)
+print(secret_key)
 
-    guess = []
-    for j in range(4): #hier word de eerste guess gegenereerd
-        k1 = print(input('Geef je 1e kleur: '))
-        k2 = print(input('Geef je 2e kleur: '))
-        k3 = print(input('Geef je 3e kleur: '))
-        k4 = print(input('Geef je 4e kleur: '))
 
+def gok():
+    k1 = input('Geef je 1e kleur: ')
+    k2 = input('Geef je 2e kleur: ')
+    k3 = input('Geef je 3e kleur: ')
+    k4 = input('Geef je 4e kleur: ')
+    guess = [k1, k2, k3, k4]
     print(guess)
+gok()
 
-def check_key(guess, secret_key):
-    zwart = 0
-    wit = 0
-    for i in range(4):
-        if guess[i] in secret_key: #hier word gekeken of er dingen overeenkomen tussen de code en de guess ÉN word er een nieuwe guess gegenereerd tot max 10
-            if guess[i] == secret_key[i]:
-                zwart += 1
+
+
+def mastermind_pc_code(secret_key):
+    if(gok() == secret_key()):
+        print('Gefeliciteerd je bent een mastermind!')
+    else:
+        while(gok() != secret_key):
+            aantal_guesses = 0
+            guess = str(guess)
+            secret_key = str(secret_key)
+
+            for i in range(0,4):
+                if(guess[i] == secret_key[i]):
+                    aantal_guesses += 1
+                else:
+                    continue
+
+
+            if aantal_guesses <= 10:
+                gok()
             else:
-                wit += 1
+                print('game over')
 
 
-mastermind_PC_code()
+mastermind_pc_code(secret_key)
