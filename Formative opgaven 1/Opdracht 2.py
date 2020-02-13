@@ -51,4 +51,4 @@ def tekstCheck(r1, r2, index):
 tekstCheck(regel1, regel2, indexFout)
 
 #code gemaakt met de hulp van guy
-#guy heeft zijn code zelf gemaakr en mij er vervolgens mee geholpen
+#guy heeft zijn code zelf gemaakt en mij er vervolgens mee geholpen
