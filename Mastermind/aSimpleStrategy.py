@@ -1,7 +1,18 @@
 import itertools
+from collections import Counter
 
 
-def maak_alle_mogelijkheden():  # dit maakt ALLE permutaties
+def evalueer_guess(gok, secret):
+    # Zie voetnoot
+    correct = 0
+    gevonden = sum((Counter(secret) & Counter(gok)).values())
+    for c, g in zip(gok, secret):
+        if c == g:
+            correct += 1
+    return correct, gevonden - correct
+
+
+def maak_alle_mogelijkheden():
     kleuren_lijst = ['rood', 'oranje', 'geel', 'groen', 'blauw', 'paars']
     mogelijkheden_lijst = []
     for prod in itertools.product(kleuren_lijst, repeat=4):
@@ -20,24 +31,15 @@ def input_secret_key():
 
 def ai_mastermind_gok(ai_gok, tip, ai_opties_lijst, ronde):
     mogelijkheden_dict = {}
-    if ronde == 0:
+    if ronde == 1:
         print('AI voert in: {}'.format(ai_opties_lijst[0]))
         return ai_opties_lijst[0], ai_opties_lijst
     else:
         nieuwe_pogingen = []
         for optie in ai_opties_lijst:
-            hints = []
-            for i in range(0, 4):
-                if (optie[i] == ai_gok[i]):
-                    hints.append('wit')
-                elif (optie[i] in ai_gok[i]):
-                    hints.append('zwart')
-
-            if hints.count('wit') == 3:
-                hints = ['wit', 'wit', 'wit']
-
-            mogelijkheden_dict[optie] = hints
-        print(len(mogelijkheden_dict.items()))
+            feedback = evalueer_guess(optie, ai_gok)
+            mogelijkheden_dict[optie] = feedback
+        # print('Aantal opties voor AI: {}'.format(len(mogelijkheden_dict.items())))
         for k, v in mogelijkheden_dict.items():
             if v == tip:
                 nieuwe_pogingen.append(k)
@@ -48,8 +50,9 @@ def ai_mastermind_gok(ai_gok, tip, ai_opties_lijst, ronde):
 def play_game():
     secret_key = input_secret_key()
     print('secret key is: {}'.format(secret_key))
-    aantal_guesses = 0
+    aantal_guesses = 1
     ai_mogelijkheden = maak_alle_mogelijkheden()
+    print('\n Ronde {}'.format(aantal_guesses))
     gok, ai_mogelijkheden = ai_mastermind_gok(ai_gok=None, tip=None, ai_opties_lijst=ai_mogelijkheden,
                                               ronde=aantal_guesses)
 
@@ -58,19 +61,11 @@ def play_game():
     else:
         play = True
         while play:
-            tips = []
+            tips = evalueer_guess(gok, secret_key)
+            print('feedback: {}'.format(tips))
             aantal_guesses += 1
-            for i in range(0, 4):
-                if (gok[i] == secret_key[i]):
-                    tips.append('wit')
-                elif (gok[i] in secret_key[i]):
-                    tips.append('zwart')
-
-            if tips.count('wit') == 3:
-                tips = ['wit', 'wit', 'wit']
-
-            if aantal_guesses <= 10:
-                print('ronde {}'.format(aantal_guesses))
+            print('\n Ronde {}'.format(aantal_guesses))
+            if aantal_guesses <= 9:
                 gok, ai_mogelijkheden = ai_mastermind_gok(ai_gok=gok, tip=tips, ai_opties_lijst=ai_mogelijkheden,
                                                           ronde=aantal_guesses)
                 if gok == secret_key:
@@ -82,3 +77,7 @@ def play_game():
 
 
 play_game()
+
+
+# https://stackoverflow.com/questions/20298190/mastermind-minimax-algorithm
+# https://www.programiz.com/python-programming/methods/built-in/min

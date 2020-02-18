@@ -19,10 +19,7 @@ def maak_alle_mogelijkheden():
     return mogelijkheden_lijst
 
 
-def evaluate(guess, secret):
-    matches = sum((Counter(secret) & Counter(guess)).values())
-    bullseye = sum(c == g for c, g in zip(secret, guess))
-    return bullseye, matches - bullseye
+
 
 
 def key(codes):
@@ -30,7 +27,6 @@ def key(codes):
         for c in codes:
             count_dict = Counter(evaluate(g, c))
     max(count_dict.values())
-
 
 # Counter geeft een dict terug met telling bijv: {[rood, rood, rood, geel]: 100}
 # Counter doet count maken van elke code. Code is combinatie van kleuren
@@ -41,6 +37,10 @@ def evalueer_codes(codes, guess, feedback):
             codes.append(c)
     return codes
 
+def evaluate(guess, secret):
+    matches = sum((Counter(secret) & Counter(guess)).values())
+    bullseye = sum(c == g for c, g in zip(secret, guess))
+    return bullseye, matches - bullseye
 
 def knuth(secret, key):
     """Run Knuth's 5-guess algorithm on the given secret."""
