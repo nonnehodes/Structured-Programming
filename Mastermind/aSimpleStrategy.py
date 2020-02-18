@@ -1,12 +1,13 @@
 import itertools
 
 
-def maak_alle_mogelijkheden(): #dit maakt ALLE permutaties
+def maak_alle_mogelijkheden():  # dit maakt ALLE permutaties
     kleuren_lijst = ['rood', 'oranje', 'geel', 'groen', 'blauw', 'paars']
     mogelijkheden_lijst = []
     for prod in itertools.product(kleuren_lijst, repeat=4):
         mogelijkheden_lijst.append(prod)
     return mogelijkheden_lijst
+
 
 def input_secret_key():
     k1 = input('Geef je 1e kleur: ')
@@ -49,7 +50,8 @@ def play_game():
     print('secret key is: {}'.format(secret_key))
     aantal_guesses = 0
     ai_mogelijkheden = maak_alle_mogelijkheden()
-    gok, ai_mogelijkheden = ai_mastermind_gok(ai_gok=None, tip=None, ai_opties_lijst=ai_mogelijkheden, ronde=aantal_guesses)
+    gok, ai_mogelijkheden = ai_mastermind_gok(ai_gok=None, tip=None, ai_opties_lijst=ai_mogelijkheden,
+                                              ronde=aantal_guesses)
 
     if gok == secret_key:
         print('Game over! AI heeft gewonnen.')
@@ -69,7 +71,8 @@ def play_game():
 
             if aantal_guesses <= 10:
                 print('ronde {}'.format(aantal_guesses))
-                gok, ai_mogelijkheden = ai_mastermind_gok(ai_gok=gok, tip=tips, ai_opties_lijst=ai_mogelijkheden, ronde=aantal_guesses)
+                gok, ai_mogelijkheden = ai_mastermind_gok(ai_gok=gok, tip=tips, ai_opties_lijst=ai_mogelijkheden,
+                                                          ronde=aantal_guesses)
                 if gok == secret_key:
                     print('Game over! AI heeft gewonnen!')
                     play = False
@@ -78,6 +81,4 @@ def play_game():
                 break
 
 
-
 play_game()
-

@@ -12,6 +12,7 @@ def gok():
     print(guess)
     return guess
 
+
 def generate_secrete_key():
     secret_key = []
     for kleur in range(4):
@@ -37,7 +38,6 @@ def mastermind_pc_code():
                     print('Gefeliciteerd je bent een mastermind!')
                 elif (guess[i] in secret_key):
                     tips.append('zwart')
-
 
             print(tips)
             print('Je hebt {} van de 10 pogingen gebruikt'.format(aantal_guesses))

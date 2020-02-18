@@ -179,7 +179,7 @@
       <workItem from="1580821177070" duration="25896000" />
       <workItem from="1581075626061" duration="16231000" />
       <workItem from="1581414983848" duration="21887000" />
-      <workItem from="1581881938792" duration="18118000" />
+      <workItem from="1581881938792" duration="20507000" />
     </task>
     <servers />
   </component>
@@ -207,7 +207,7 @@
     <SUITE FILE_PATH="coverage/Structured_programming$Mastermind_PC_code.coverage" NAME="Mastermind PC code Coverage Results" MODIFIED="1581869277473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mastermind" />
     <SUITE FILE_PATH="coverage/Structured_programming$aSimpleStrategy.coverage" NAME="aSimpleStrategy Coverage Results" MODIFIED="1582012479836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mastermind" />
     <SUITE FILE_PATH="coverage/Structured_programming$Opdracht_12.coverage" NAME="Opdracht 12 Coverage Results" MODIFIED="1581076234947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Structured_programming$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1582015655184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mastermind" />
+    <SUITE FILE_PATH="coverage/Structured_programming$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1582017835481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mastermind" />
     <SUITE FILE_PATH="coverage/Structured_programming$Opdracht_2.coverage" NAME="Opdracht 2 Coverage Results" MODIFIED="1581108191528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Structured_programming$Opdracht_5.coverage" NAME="Opdracht 5 Coverage Results" MODIFIED="1580915721362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Structured_programming$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1581593225192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mastermind" />
