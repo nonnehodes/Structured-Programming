@@ -78,7 +78,7 @@ def input_secret_key():
 
 def ai_mastermind_gok(ai_gok, tip, ai_opties_lijst, ronde):
     mogelijkheden_dict = {}
-    eersteGok = ('rood', 'rood', 'oranje', 'oranje')
+    eersteGok = ('rood', 'rood', 'oranje', 'geel')
     if ronde == 0:
         print('AI voert in: {}'.format(eersteGok))
         return eersteGok, ai_opties_lijst
