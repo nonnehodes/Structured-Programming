@@ -27,13 +27,14 @@ def mastermind_pc_code():
     if guess == secret_key:
         print('Gefeliciteerd je bent een mastermind!')
     else:
-        aantal_guesses = 1
+        aantal_guesses = 0
         while guess != secret_key:
             tips = []
             aantal_guesses += 1
             for i in range(0, 4):
                 if (guess[i] == secret_key[i]):
                     tips.append('wit')
+                    print('Gefeliciteerd je bent een mastermind!')
                 elif (guess[i] in secret_key):
                     tips.append('zwart')
 
@@ -41,11 +42,11 @@ def mastermind_pc_code():
             print(tips)
             print('Je hebt {} van de 10 pogingen gebruikt'.format(aantal_guesses))
 
-            if aantal_guesses <= 10:
+            if aantal_guesses <= 9:
                 guess = gok()
             else:
                 print('game over')
                 break
-        print('Gefeliciteerd je bent een mastermind!')
+
 
 mastermind_pc_code()

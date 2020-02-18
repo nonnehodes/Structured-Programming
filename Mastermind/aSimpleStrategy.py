@@ -1,8 +1,7 @@
 import itertools
-import json
 
 
-def maak_alle_mogelijkheden():
+def maak_alle_mogelijkheden(): #dit maakt ALLE permutaties
     kleuren_lijst = ['rood', 'oranje', 'geel', 'groen', 'blauw', 'paars']
     mogelijkheden_lijst = []
     for prod in itertools.product(kleuren_lijst, repeat=4):
