@@ -3,6 +3,7 @@ from aSimpleStrategy import play_game
 from aWorstCaseStrategy import minimax
 from aHomemadeStrategy import homemade_strategie
 from MastermindPCcode import mastermind_pc_code
+from aWorstCaseStrategy import input_secret_key
 
 
 def spel_menu(speluitleg):
@@ -13,7 +14,7 @@ def spel_menu(speluitleg):
         if keuze2 == 'A' or keuze2 == 'a':
             play_game()
         elif keuze2 == 'B' or keuze2 == 'b':
-            minimax()
+            minimax(input_secret_key())
         elif keuze2 == 'C' or keuze2 == 'c':
             homemade_strategie()
         else:

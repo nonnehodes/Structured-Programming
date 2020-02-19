@@ -1,4 +1,5 @@
 import random
+from collections import Counter
 
 kleuren_lijst = ['rood', 'oranje', 'geel', 'groen', 'blauw', 'paars']
 
@@ -22,22 +23,30 @@ def generate_secrete_key():
     return secret_key
 
 
+def evalueer_guess(gok, secret):
+    # Zie voetnoot
+    correct = 0
+    gevonden = sum((Counter(secret) & Counter(gok)).values())
+    for c, g in zip(gok, secret):
+        if c == g:
+            correct += 1
+    return correct, gevonden - correct
+
+
 def mastermind_pc_code():
     secret_key = generate_secrete_key()
+    print(secret_key)
     guess = gok()
     if guess == secret_key:
         print('Gefeliciteerd je bent een mastermind!')
     else:
         aantal_guesses = 0
         while guess != secret_key:
-            tips = []
             aantal_guesses += 1
-            for i in range(0, 4):
-                if (guess[i] == secret_key[i]):
-                    tips.append('wit')
-                    print('Gefeliciteerd je bent een mastermind!')
-                elif (guess[i] in secret_key):
-                    tips.append('zwart')
+            tips = evalueer_guess(guess, secret_key)
+            if guess == secret_key:
+                print('Gefeliciteerd je bent een mastermind!')
+                break
 
             print(tips)
             print('Je hebt {} van de 10 pogingen gebruikt'.format(aantal_guesses))
@@ -45,7 +54,8 @@ def mastermind_pc_code():
             if aantal_guesses <= 9:
                 guess = gok()
             else:
-                print('game over')
+                print('Game over!')
+                print('De correcte code was:{}'.format(secret_key))
                 break
-
-
+        if guess == secret_key:
+            print('Gefeliciteerd je bent een mastermind!')

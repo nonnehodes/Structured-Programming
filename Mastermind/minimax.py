@@ -48,7 +48,6 @@ def minimax(secret):
             guess = min(all_codes, key=key_functie)
 
 
-minimax(input_secret_key())
 
 # https://stackoverflow.com/questions/20298190/mastermind-minimax-algorithm
 # https://www.programiz.com/python-programming/methods/built-in/min
