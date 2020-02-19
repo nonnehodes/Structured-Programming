@@ -57,7 +57,7 @@ def play_game():
                                               ronde=aantal_guesses)
 
     if gok == secret_key:
-        print('Game over! AI heeft gewonnen.')
+        print('AI heeft gewonnen! Game over!')
     else:
         play = True
         while play:
@@ -75,8 +75,6 @@ def play_game():
                 print('Meer dan 10 gokken, AI heeft verloren')
                 break
 
-
-play_game()
 
 
 # https://stackoverflow.com/questions/20298190/mastermind-minimax-algorithm

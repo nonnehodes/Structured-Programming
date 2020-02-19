@@ -34,12 +34,13 @@ def minimax(secret):
     guess = ('rood', 'rood', 'oranje', 'oranje')
     ronde = 1
     while True:
-        print('Speelronde: {}'.format(ronde))
+        print('\n Ronde: {}'.format(ronde))
         ronde += 1
         feedback = evalueer_guess(guess, secret)
-        print("Guess {}: feedback {}".format(guess, feedback))
+        print('AI voert in: {}'.format(guess))
+        print('Feedback: {}'.format(feedback))
         if guess == secret:
-            print('AI heeft gewonnen! Game Over!')
+            print('AI heeft gewonnen! Game over!')
             break
         codes = [c for c in codes if evalueer_guess(guess, c) == feedback]
         if len(codes) == 1:
@@ -48,7 +49,6 @@ def minimax(secret):
             guess = min(all_codes, key=key_functie)
 
 
-minimax(input_secret_key())
 
 # https://stackoverflow.com/questions/20298190/mastermind-minimax-algorithm
 # https://www.programiz.com/python-programming/methods/built-in/min

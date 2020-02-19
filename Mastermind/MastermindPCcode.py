@@ -18,7 +18,7 @@ def generate_secrete_key():
     for kleur in range(4):
         kleur = random.choice(kleuren_lijst)
         secret_key.append(kleur)
-    print('antwoord: {}'.format(secret_key))
+    # print('antwoord: {}'.format(secret_key))
     return secret_key
 
 
@@ -49,4 +49,3 @@ def mastermind_pc_code():
                 break
 
 
-mastermind_pc_code()
