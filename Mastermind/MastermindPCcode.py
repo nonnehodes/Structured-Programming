@@ -59,3 +59,6 @@ def mastermind_pc_code():
                 break
         if guess == secret_key:
             print('Gefeliciteerd je bent een mastermind!')
+
+# https://stackoverflow.com/questions/20298190/mastermind-minimax-algorithm
+# https://www.programiz.com/python-programming/methods/built-in/min

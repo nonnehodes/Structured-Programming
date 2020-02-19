@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b4bd19c0-dba8-44cc-96b6-e226e0b679f3" name="Default Changelist" comment="bijna klaar nu echt">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Structured programming.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Structured programming.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="b4bd19c0-dba8-44cc-96b6-e226e0b679f3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mastermind/MastermindCompleet.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mastermind/MastermindCompleet.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mastermind/MastermindPCcode.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mastermind/MastermindPCcode.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mastermind/aHomemadeStrategy.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mastermind/aHomemadeStrategy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mastermind/aSimpleStrategy.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mastermind/aSimpleStrategy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mastermind/aWorstCaseStrategy.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mastermind/aWorstCaseStrategy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mastermind/minimax.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mastermind/minimax.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -174,9 +169,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.MastermindCompleet" />
+        <item itemvalue="Python.aSimpleStrategy" />
         <item itemvalue="Python.aHomemadeStrategy" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.aSimpleStrategy" />
         <item itemvalue="Python.aWorstCaseStrategy" />
       </list>
     </recent_temporary>
@@ -195,7 +190,7 @@
       <workItem from="1581075626061" duration="16231000" />
       <workItem from="1581414983848" duration="21887000" />
       <workItem from="1581881938792" duration="20507000" />
-      <workItem from="1582063883727" duration="11946000" />
+      <workItem from="1582063883727" duration="14506000" />
     </task>
     <task id="LOCAL-00001" summary="bijna klaar">
       <created>1582063914433</created>
@@ -218,7 +213,21 @@
       <option name="project" value="LOCAL" />
       <updated>1582064236930</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="klaar">
+      <created>1582140726336</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1582140726336</updated>
+    </task>
+    <task id="LOCAL-00005" summary="klaar maar verbeterd">
+      <created>1582141888760</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1582141888760</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,20 +248,17 @@
     <MESSAGE value="bijna klaar" />
     <MESSAGE value="bijna klaar nu echt" />
     <MESSAGE value="verwijderen niet gebruikte bestanden" />
-    <option name="LAST_COMMIT_MESSAGE" value="verwijderen niet gebruikte bestanden" />
+    <MESSAGE value="klaar" />
+    <MESSAGE value="klaar maar verbeterd" />
+    <option name="LAST_COMMIT_MESSAGE" value="klaar maar verbeterd" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Mastermind/aHomemadeStrategy.py</url>
-          <line>31</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Mastermind/aHomemadeStrategy.py</url>
-          <line>35</line>
-          <option name="timeStamp" value="17" />
+          <url>file://$PROJECT_DIR$/Mastermind/test.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -263,24 +269,17 @@
         </breakpoint>
       </default-breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="PythonConfigurationType">
-        <watch expression="ai_mogelijkheden" />
-        <watch expression="len(ai_mogelijkheden)" language="Python" />
-        <watch expression="len(nieuwe_pogingen)" language="Python" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Structured_programming$Opdracht_3.coverage" NAME="Opdracht 3 Coverage Results" MODIFIED="1581098313445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Structured_programming$Opdracht_6.coverage" NAME="Opdracht 6 Coverage Results" MODIFIED="1580982520083" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Structured_programming$MastermindPCcode.coverage" NAME="MastermindPCcode Coverage Results" MODIFIED="1582013549779" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mastermind" />
-    <SUITE FILE_PATH="coverage/Structured_Programming$MastermindCompleet.coverage" NAME="MastermindCompleet Coverage Results" MODIFIED="1582140692459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mastermind" />
+    <SUITE FILE_PATH="coverage/Structured_Programming$MastermindCompleet.coverage" NAME="MastermindCompleet Coverage Results" MODIFIED="1582143286196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mastermind" />
     <SUITE FILE_PATH="coverage/Structured_programming$Opdracht_7.coverage" NAME="Opdracht 7 Coverage Results" MODIFIED="1581075992338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Structured_programming$Opdracht_4.coverage" NAME="Opdracht 4 Coverage Results" MODIFIED="1581078172995" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Structured_Programming$aHomemadeStrategy.coverage" NAME="aHomemadeStrategy Coverage Results" MODIFIED="1582140649231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mastermind" />
-    <SUITE FILE_PATH="coverage/Structured_Programming$test.coverage" NAME="test Coverage Results" MODIFIED="1582139168804" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mastermind" />
-    <SUITE FILE_PATH="coverage/Structured_Programming$aSimpleStrategy.coverage" NAME="aSimpleStrategy Coverage Results" MODIFIED="1582128518245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mastermind" />
+    <SUITE FILE_PATH="coverage/Structured_Programming$aHomemadeStrategy.coverage" NAME="aHomemadeStrategy Coverage Results" MODIFIED="1582141688269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mastermind" />
+    <SUITE FILE_PATH="coverage/Structured_Programming$test.coverage" NAME="test Coverage Results" MODIFIED="1582141027289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mastermind" />
+    <SUITE FILE_PATH="coverage/Structured_Programming$aSimpleStrategy.coverage" NAME="aSimpleStrategy Coverage Results" MODIFIED="1582141822721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mastermind" />
     <SUITE FILE_PATH="coverage/Structured_programming$Opdracht_1.coverage" NAME="Opdracht 1 Coverage Results" MODIFIED="1580826446768" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Structured_programming$Mastermind_PC_code.coverage" NAME="Mastermind PC code Coverage Results" MODIFIED="1581869277473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mastermind" />
     <SUITE FILE_PATH="coverage/Structured_programming$aSimpleStrategy.coverage" NAME="aSimpleStrategy Coverage Results" MODIFIED="1582012479836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mastermind" />
