@@ -18,6 +18,17 @@ def maak_alle_mogelijkheden():
         mogelijkheden_lijst.append(prod)
     return mogelijkheden_lijst
 
+def maak_aantal_mogelijkheden(ai_gok):
+    kleuren_lijst = ['rood', 'oranje', 'geel', 'groen', 'blauw', 'paars']
+    nieuwe_kleuren = []
+    for kleur in kleuren_lijst:
+        if kleur in ai_gok:
+            nieuwe_kleuren.append(kleur)
+    mogelijkheden_lijst = []
+    for prod in itertools.product(nieuwe_kleuren, repeat=4):
+        mogelijkheden_lijst.append(prod)
+    return mogelijkheden_lijst
+
 
 def ai_mastermind_gok(ai_gok, tip, ai_opties_lijst, ronde):
     mogelijkheden_dict = {}
@@ -53,7 +64,7 @@ def homemade_strategie():
     aantal_guesses = 1
     ai_mogelijkheden = maak_alle_mogelijkheden()
     print('\n Ronde {}'.format(aantal_guesses))
-    guess = ('rood', 'rood', 'oranje', 'oranje')
+    guess = ('rood', 'groen', 'oranje', 'blauw')
     print('AI voert in: {}'.format(guess))
     feedback = evalueer_guess(guess, secret_key)
     play = True
@@ -63,6 +74,7 @@ def homemade_strategie():
         if aantal_guesses == 1:
             if feedback == (4, 0):
                 print('AI heeft gewonnen! Game over!')
+                break
             elif feedback == (0, 0):
                 for kleur in set(guess):
                     for optie in ai_mogelijkheden:
@@ -70,11 +82,7 @@ def homemade_strategie():
                             verwijder_lijst.append(optie)
                     ai_mogelijkheden = list(set(ai_mogelijkheden) - set(verwijder_lijst))
             elif feedback == (0, 4) or feedback == (1, 3) or feedback == (2, 2):
-                for kleur in set(guess):
-                    for optie in ai_mogelijkheden:
-                        if kleur not in optie:
-                            verwijder_lijst.append(optie)
-                    ai_mogelijkheden = list(set(ai_mogelijkheden) - set(verwijder_lijst))
+                ai_mogelijkheden = maak_aantal_mogelijkheden(guess)
 
         tips = evalueer_guess(guess, secret_key)
         print('feedback: {}'.format(tips))
@@ -90,7 +98,6 @@ def homemade_strategie():
         else:
             print('Meer dan 10 gokken, AI heeft verloren')
             break
-
 
 # https://stackoverflow.com/questions/20298190/mastermind-minimax-algorithm
 # https://www.programiz.com/python-programming/methods/built-in/min
